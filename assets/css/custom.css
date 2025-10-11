@@ -106,11 +106,18 @@ html, body {
 
 /* Dark mode */
 .dark {
-  --bg: #0b1220;
-  --fg: #ffffff;
-  --card-bg: #0f172a;
-  --muted: #94a3b8;
+    --bg: #0b1220;
+    --fg: #ffffff;
+    --card-bg: #0f172a;
+    --muted: #94a3b8;
 }
+
+/* FIX: Ensure the Hamburger Icon is white in Dark Mode */
+.dark .navbar-toggler-icon {
+    /* Inverts the SVG icon color */
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
 .dark .nav-link { color: var(--fg) !important; }
 .dark .btn.btn-outline-dark { color: var(--fg); border-color: var(--fg); }
 
@@ -134,6 +141,14 @@ html, body {
 /* Toggle button clarity in dark mode */
 .dark #theme-toggle { color: #fff; border-color: #fff; }
 .dark .btn-outline-light { color: #fff; border-color: #fff; }
+.dark #theme-toggle.btn-outline-light:hover,
+.dark #theme-toggle.btn-outline-light:focus,
+.dark #theme-toggle.btn-outline-light:active {
+  background-color: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
+}
 
 /* Ensure other dark areas aren't double-dark */
 .dark .bg-dark { background-color: #0a0a0a !important; }
@@ -148,22 +163,22 @@ html, body {
 /* Contact cards and inputs visibility in dark mode */
 .dark .contact-form-card,
 .dark .contact-info-card {
-  background: var(--card-bg) !important;
-  color: var(--fg) !important;
-  border: 1px solid rgba(255,255,255,.10);
+    background: var(--card-bg) !important;
+    color: var(--fg) !important;
+    border: 1px solid rgba(255,255,255,.10);
 }
 .dark .contact-form-card .contact-title,
 .dark .contact-info-card .contact-title { color: var(--fg) !important; }
 .dark .contact-form-card .form-control,
 .dark .contact-info-card .form-control,
 .dark .contact-form-card textarea.form-control {
-  background-color: #0b1220 !important;
-  border-color: #334155 !important;
-  color: var(--fg) !important;
+    background-color: #0b1220 !important;
+    border-color: #334155 !important;
+    color: var(--fg) !important;
 }
 .dark .contact-form-card .form-control::placeholder,
 .dark .contact-info-card .form-control::placeholder {
-  color: #9ca3af !important;
+    color: #9ca3af !important;
 }
 
 
@@ -224,89 +239,89 @@ h3, h4, .card .title { font-weight: 600; }
 
 /* ===== Text Readability & Card Style ===== */
 body, p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #222;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #222;
 }
 
 .section-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #000;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
 }
 
 .card-title {
-  font-weight: 600;
-  font-size: 20px;
-  color: #000;
-  margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 0.5rem;
 }
 
 .card-subtitle {
-  font-size: 16px;
-  font-weight: 500;
-  color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
 }
 
 .card-text {
-  font-size: 16px;
-  color: #333;
+    font-size: 16px;
+    color: #333;
 }
 
 .section {
-  padding-top: 70px;
-  padding-bottom: 70px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .bg-custom-gray {
-  background-color: #f7f7f7;
+    background-color: #f7f7f7;
 }
 
 .card {
-  border: none;
-  border-left: 4px solid var(--accent); /* accent */
-  border-radius: 8px;
-  background: var(--card-bg);
+    border: none;
+    border-left: 4px solid var(--accent); /* accent */
+    border-radius: 8px;
+    background: var(--card-bg);
 }
 
 .card-body {
-  padding: 20px;
+    padding: 20px;
 }
 
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 22px;
-  }
-  .card-title {
-    font-size: 18px;
-  }
-  .card-subtitle,
-  .card-text {
-    font-size: 15px;
-  }
+    .section-title {
+        font-size: 22px;
+    }
+    .card-title {
+        font-size: 18px;
+    }
+    .card-subtitle,
+    .card-text {
+        font-size: 15px;
+    }
 }
 #titleByGalal {
-  font-size: 25px;
-  font-weight: 600;
-  color: #fcf6f6;
-  text-decoration:dotted;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  /* font-style: bold; */
+    font-size: 25px;
+    font-weight: 600;
+    color: #fcf6f6;
+    text-decoration:dotted;
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    /* font-style: bold; */
 }
 #jalalMiniTitle {
-  font-size: 25px;
-  font-weight: 600;
-  color: rgb(54, 48, 48)#000000;
-  text-decoration:double;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  /* font-style: bold; */
-  font-style: italic;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(54, 48, 48)#000000;
+    text-decoration:double;
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    /* font-style: bold; */
+    font-style: italic;
 }
 #freeforwork {
-  font-size: 25px;
-  font-weight: 600;
-  color: #836d6d;
-  text-decoration:dotted;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-style: italic;
+    font-size: 25px;
+    font-weight: 600;
+    color: #836d6d;
+    text-decoration:dotted;
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-style: italic;
 }
