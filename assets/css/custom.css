@@ -1,0 +1,218 @@
+/* Custom enhancements: animated gradient, scroll reveal, tilt, counters */
+:root {
+    --accent: #f43f5e; /* modern rose-500/600 */
+}
+
+html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Animated gradient overlay on hero header */
+.header {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Remove any overlay shade on header */
+.header:before {
+    content: none !important;
+    display: none !important;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Reframe hero background for desktop/laptop and remove gradient */
+.header {
+    /* Use plain image only (no gradient) */
+    background-image: url(../imgs/GloAlone.jpg) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    /* Move image up slightly to reveal more suit */
+    background-position: 50% 24% !important; /* center horizontally, bias further up */
+    background-attachment: scroll !important; /* avoid fixed jitter/cropping issues */
+}
+
+@media (max-width: 1199.98px) {
+  .header { background-position: 50% 30% !important; }
+}
+@media (max-width: 991.98px) {
+  .header { background-position: 50% 37% !important; }
+}
+@media (max-width: 575.98px) {
+  .header { background-position: 50% 46% !important; }
+}
+
+/* Improve text readability on bright backgrounds */
+.header .header-title,
+.header .header-subtitle,
+.header .header-mono {
+    text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+}
+
+@media (min-width: 768px) {
+  .header .header-content {
+      display: inline-block;
+      padding: 14px 18px;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.18); /* very light backing for legibility */
+  }
+}
+
+/* Scroll reveal base state */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.reveal.reveal-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* 3D tilt effect */
+.tilt-card {
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    transform-style: preserve-3d;
+}
+
+.tilt-card.hovered {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Counters */
+.count {
+    display: inline-block;
+}
+
+/* Ensure header social icons are visible atop the image */
+.header .social-link, .header .social-link i {
+    color: #fff !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.45);
+}
+
+/* Override theme's gradient overlay defined in johndoe.css */
+.header {
+    background-image: url(../imgs/GloAlone.jpg) !important;
+}
+
+/* Visually hidden (fallback if Bootstrap sr-only not present) */
+.sr-only-custom {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Accent and button polish */
+.text-danger { color: var(--accent) !important; }
+.badge-danger { background-color: var(--accent) !important; }
+.btn.btn-primary { background-color: var(--accent); border-color: var(--accent); }
+.btn.btn-primary:hover { filter: brightness(0.92); }
+
+/* Subtle heading tracking */
+.brand-title, .header-title, h1, h2 {
+    letter-spacing: 0.3px;
+}
+
+/* Improve paragraph and small text readability */
+p, .subtitle, .card .subtitle, .card p, li, .nav-link {
+    font-weight: 400;
+    color: #2a2f35;
+}
+
+/* Slightly heavier section titles */
+h3, h4, .card .title { font-weight: 600; }
+
+/* Align resume column bottoms using flex, keep responsive */
+#resume .row { align-items: stretch; }
+#resume .row > [class*="col-"] { display: flex; flex-direction: column; }
+#resume .row > [class*="col-"] > .card { flex: 1 1 auto; }
+/* The right-most column contains two cards; make them split space and keep gap */
+#resume .row > .col-lg-4:last-child { display: flex; flex-direction: column; }
+#resume .row > .col-lg-4:last-child > .card { flex: 1 1 0; }
+#resume .row > .col-lg-4:last-child > .card + .card { margin-top: 30px; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .header:before { animation: none; }
+    .reveal { transition: none; }
+    .tilt-card { transition: none; }
+}
+
+
+/* ===== Text Readability & Card Style ===== */
+body, p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #222;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .card-title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  
+  .bg-custom-gray {
+    background-color: #f7f7f7;
+  }
+  
+  .card {
+    border: none;
+    border-left: 4px solid #dc3545; /* red accent */
+    border-radius: 8px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 22px;
+    }
+    .card-title {
+      font-size: 18px;
+    }
+    .card-subtitle,
+    .card-text {
+      font-size: 15px;
+    }
+  }
+  
