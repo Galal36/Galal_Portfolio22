@@ -155,64 +155,80 @@ h3, h4, .card .title { font-weight: 600; }
 
 /* ===== Text Readability & Card Style ===== */
 body, p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #222;
-  }
-  
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #333;
+}
+
+.section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.bg-custom-gray {
+  background-color: #f7f7f7;
+}
+
+.card {
+  border: none;
+  border-left: 4px solid #dc3545; /* red accent */
+  border-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
   .section-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #000;
+    font-size: 22px;
   }
-  
   .card-title {
-    font-weight: 600;
-    font-size: 20px;
-    color: #000;
-    margin-bottom: 0.5rem;
+    font-size: 18px;
   }
-  
-  .card-subtitle {
-    font-size: 16px;
-    font-weight: 500;
-    color: #555;
-  }
-  
+  .card-subtitle,
   .card-text {
-    font-size: 16px;
-    color: #333;
+    font-size: 15px;
   }
-  
-  .section {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  
-  .bg-custom-gray {
-    background-color: #f7f7f7;
-  }
-  
-  .card {
-    border: none;
-    border-left: 4px solid #dc3545; /* red accent */
-    border-radius: 8px;
-  }
-  
-  .card-body {
-    padding: 20px;
-  }
-  
-  @media (max-width: 768px) {
-    .section-title {
-      font-size: 22px;
-    }
-    .card-title {
-      font-size: 18px;
-    }
-    .card-subtitle,
-    .card-text {
-      font-size: 15px;
-    }
-  }
-  
+}
+#titleByGalal {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fcf6f6;
+  text-decoration:dotted;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  /* font-style: bold; */
+}
+#jalalMiniTitle {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(54, 48, 48)#000000;
+  text-decoration:double;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  /* font-style: bold; */
+  font-style: italic;
+}
