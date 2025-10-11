@@ -1,6 +1,10 @@
 /* Custom enhancements: animated gradient, scroll reveal, tilt, counters */
 :root {
     --accent: #f43f5e; /* modern rose-500/600 */
+    --bg: #ffffff;
+    --fg: #1f2937; /* slate-800 */
+    --card-bg: #ffffff;
+    --muted: #4b5563; /* slate-600 */
 }
 
 html, body {
@@ -8,6 +12,8 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
 }
 
 /* Animated gradient overlay on hero header */
@@ -97,6 +103,69 @@ html, body {
     color: #fff !important;
     text-shadow: 0 1px 2px rgba(0,0,0,0.45);
 }
+
+/* Dark mode */
+.dark {
+  --bg: #0b1220;
+  --fg: #ffffff;
+  --card-bg: #0f172a;
+  --muted: #94a3b8;
+}
+.dark .nav-link { color: var(--fg) !important; }
+.dark .btn.btn-outline-dark { color: var(--fg); border-color: var(--fg); }
+
+/* Component theming for dark mode */
+.dark .navbar, .dark .bg-white, .dark .navbar-light { background-color: #0a0a0a !important; border-bottom: 1px solid rgba(255,255,255,.08); }
+.dark .footer { background-color: #0b1220; color: var(--fg); }
+.dark .bg-custom-gray { background-color: #111827; }
+.dark .card .subtitle { color: var(--muted); }
+.dark p, .dark li { color: var(--fg); }
+.dark .progress { background-color: #1f2937; }
+.dark .progress .progress-bar { background-color: var(--accent) !important; }
+.dark .line { background: var(--accent); }
+
+/* Make all section text white in dark mode */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
+.dark .brand-title, .dark .header-title, .dark .header-subtitle, .dark .header-mono,
+.dark .card-title, .dark .card-subtitle, .dark .card-text, .dark .subtitle,
+.dark .contact-title, .dark .small, .dark label, .dark .nav-link,
+.dark .section, .dark .section * { color: var(--fg) !important; }
+
+/* Toggle button clarity in dark mode */
+.dark #theme-toggle { color: #fff; border-color: #fff; }
+.dark .btn-outline-light { color: #fff; border-color: #fff; }
+
+/* Ensure other dark areas aren't double-dark */
+.dark .bg-dark { background-color: #0a0a0a !important; }
+
+/* Card header/icon background fixes (light + dark) */
+.card .card-header { background-color: var(--card-bg); border-bottom: 1px solid rgba(0,0,0,.06); }
+.card .card-header.has-icon { background-color: var(--card-bg); }
+.dark .card .card-header { background-color: var(--card-bg) !important; border-bottom: 1px solid rgba(255,255,255,.10); }
+.dark .card .card-header.has-icon { background-color: var(--card-bg) !important; }
+.dark .card .card-header .ti, .dark .card .card-header i { color: var(--accent) !important; }
+
+/* Contact cards and inputs visibility in dark mode */
+.dark .contact-form-card,
+.dark .contact-info-card {
+  background: var(--card-bg) !important;
+  color: var(--fg) !important;
+  border: 1px solid rgba(255,255,255,.10);
+}
+.dark .contact-form-card .contact-title,
+.dark .contact-info-card .contact-title { color: var(--fg) !important; }
+.dark .contact-form-card .form-control,
+.dark .contact-info-card .form-control,
+.dark .contact-form-card textarea.form-control {
+  background-color: #0b1220 !important;
+  border-color: #334155 !important;
+  color: var(--fg) !important;
+}
+.dark .contact-form-card .form-control::placeholder,
+.dark .contact-info-card .form-control::placeholder {
+  color: #9ca3af !important;
+}
+
 
 /* Override theme's gradient overlay defined in johndoe.css */
 .header {
@@ -195,8 +264,9 @@ body, p {
 
 .card {
   border: none;
-  border-left: 4px solid #dc3545; /* red accent */
+  border-left: 4px solid var(--accent); /* accent */
   border-radius: 8px;
+  background: var(--card-bg);
 }
 
 .card-body {
@@ -230,5 +300,13 @@ body, p {
   text-decoration:double;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   /* font-style: bold; */
+  font-style: italic;
+}
+#freeforwork {
+  font-size: 25px;
+  font-weight: 600;
+  color: #836d6d;
+  text-decoration:dotted;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-style: italic;
 }
