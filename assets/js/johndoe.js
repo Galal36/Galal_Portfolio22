@@ -194,17 +194,19 @@ $(function() {
     function applyTheme(theme) {
         if (theme === 'dark') {
             document.documentElement.classList.add('dark');
-            var $btn = $('#theme-toggle');
-            if ($btn.length) { $btn.removeClass('btn-outline-dark').addClass('btn-outline-light').text('Light'); }
+            $('.theme-toggle').each(function(){
+                $(this).removeClass('btn-outline-dark').addClass('btn-outline-light').text('Light');
+            });
         } else {
             document.documentElement.classList.remove('dark');
-            var $btn2 = $('#theme-toggle');
-            if ($btn2.length) { $btn2.removeClass('btn-outline-light').addClass('btn-outline-dark').text('Dark'); }
+            $('.theme-toggle').each(function(){
+                $(this).removeClass('btn-outline-light').addClass('btn-outline-dark').text('Dark');
+            });
         }
     }
-    var storedTheme = localStorage.getItem('theme') || 'light';
+    var storedTheme = localStorage.getItem('theme') || 'dark';
     applyTheme(storedTheme);
-    $(document).on('click', '#theme-toggle', function(){
+    $(document).on('click', '.theme-toggle', function(){
         var isDark = document.documentElement.classList.contains('dark');
         var next = isDark ? 'light' : 'dark';
         localStorage.setItem('theme', next);

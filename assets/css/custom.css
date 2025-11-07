@@ -139,11 +139,11 @@ html, body {
 .dark .section, .dark .section * { color: var(--fg) !important; }
 
 /* Toggle button clarity in dark mode */
-.dark #theme-toggle { color: #fff; border-color: #fff; }
+.dark .theme-toggle { color: #fff; border-color: #fff; }
 .dark .btn-outline-light { color: #fff; border-color: #fff; }
-.dark #theme-toggle.btn-outline-light:hover,
-.dark #theme-toggle.btn-outline-light:focus,
-.dark #theme-toggle.btn-outline-light:active {
+.dark .theme-toggle.btn-outline-light:hover,
+.dark .theme-toggle.btn-outline-light:focus,
+.dark .theme-toggle.btn-outline-light:active {
   background-color: rgba(255,255,255,0.15) !important;
   color: #fff !important;
   border-color: #fff !important;
@@ -159,6 +159,10 @@ html, body {
 .dark .card .card-header { background-color: var(--card-bg) !important; border-bottom: 1px solid rgba(255,255,255,.10); }
 .dark .card .card-header.has-icon { background-color: var(--card-bg) !important; }
 .dark .card .card-header .ti, .dark .card .card-header i { color: var(--accent) !important; }
+
+/* Ensure personal info labels and social icons are visible in dark mode */
+.dark .about-card .info li span { color: #fff !important; }
+.dark .social-link, .dark .social-link i { color: #fff !important; }
 
 /* Contact cards and inputs visibility in dark mode */
 .dark .contact-form-card,

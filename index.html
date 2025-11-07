@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,15 +29,18 @@
                 <h1 class="header-title">Galal Ali</h1>
                 <h6 class="header-mono" id="titleByGalal">Junior Back-End Developer</h6>
                 <a href="https://drive.google.com/file/d/1DOHzgMgbO2iUqETe1gYO_erZRhqTGsBa/view?usp=sharing" >
-                <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
+                <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button></a>
             </div>
         </div>
     </header>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
         <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-lg-none d-flex align-items-center ml-auto">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button class="btn btn-sm btn-outline-dark ml-2 theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+            </div>
             <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -68,7 +71,7 @@
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item ml-2">
-                        <button id="theme-toggle" class="btn btn-sm btn-outline-dark" type="button" aria-label="Toggle dark mode">Dark</button>
+                        <button class="btn btn-sm btn-outline-dark theme-toggle d-none d-lg-inline-block" type="button" aria-label="Toggle dark mode">Dark</button>
                     </li>
                 </ul>
             </div>
@@ -145,15 +148,15 @@
                         </div>
                         <div class="card-body">
                             <h6 class="title text-danger">2019 - 2023</h6>
-                            <P>Bachelor of Computer Science (Bioinformatics)</P>
+                            <P><strong>Bachelor of Computer Science (Bioinformatics)</strong></P>
                             <P class="subtitle">Assiut University – Faculty of Computers and Information<br>GPA: 3.58 / 4.0</P>
                             <hr>
                             <h6 class="title text-danger">02/2025 – 07/2025</h6>
-                            <P>Full Stack Web Development, Intensive Code Camp</P>
+                            <P><strong>Full Stack Web Development, Intensive Code Camp</strong></P>
                             <P class="subtitle">Information Technology Institute (ITI)</P>
                             <hr>
                             <h6 class="title text-danger">08/2023</h6>
-                            <P>ML, NLP and Artificial Intelligence Training</P>
+                            <P><strong>ML, NLP and Artificial Intelligence Training</strong></P>
                             <P class="subtitle">Zewail City – Blended learning system</P>
                         </div>
                     </div>
@@ -168,19 +171,19 @@
                         </div>
                         <div class="card-body">
                             <h6 class="title text-danger">04/2025 – Present</h6>
-                            <P>Back-End Developer – Repack travel</P>
-                            <P class="subtitle">Remote, Egypt<br>
+                            <P><strong>Back-End Developer – Repack travel</strong></P>
+                            <P class="subtitle"><strong>Remote, Egypt</strong><br>
                             • Developing and maintaining a Django-based order and reservation employee system with an intelligent chatbot<br>
                             • Implementing data analysis techniques to help data scientists extract actionable insights</P>
                             <hr>
                             <h6 class="title text-danger">01/2023 – 02/2024</h6>
-                            <P>Software Developer – na7ou</P>
+                            <P><strong>Software Developer – na7ou</strong></P>
                             <P class="subtitle">Assiut, Egypt<br>
                             • Developed and debugged the organization’s website using HTML, CSS, Bootstrap, and WordPress<br>
                             • Deployed the website using cloud services and maintained online services and databases</P>
                             <hr>
                             <h6 class="title text-danger">06/2021 – 12/2021</h6>
-                            <P>Software Engineer – Akeed & Beauty Of Arabic</P>
+                            <P><strong>Software Engineer – Akeed & Beauty Of Arabic</strong></P>
                             <P class="subtitle">Contributed to the business website creation, fixed errors, and maintained the platform</P>
                         </div>
                     </div>
@@ -210,9 +213,17 @@
                             <div class="progress mb-3">
                                 <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" data-width="75" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
+                            <h6>Node.js</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" data-width="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
                             <h6>PostgreSQL</h6>
                             <div class="progress mb-3">
                                 <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" data-width="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>GraphQL</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" data-width="80" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <h6>Git/GitHub</h6>
                             <div class="progress mb-3">
@@ -236,6 +247,11 @@
                             </div>
 
                             <h6>CMS: WordPress, Shopify</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                            <h6>Nginx / PM2</h6>
                             <div class="progress mb-3">
                                 <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
@@ -279,7 +295,7 @@
 
                         <div class="card-body">
                             <h6 class="title text-danger">02/2025 – 07/2025</h6>
-                            <p class="subtitle mb-2">Full Stack Web Development – Intensive Code Camp</p>
+                            <p class="subtitle mb-2"><strong>Full Stack Web Development – Intensive Code Camp</strong></p>
                             <p class="mb-0">Studied Django, Flask, REST APIs, React, Git, and Bash.</p>
                         </div>
                     </div>
@@ -295,7 +311,7 @@
                         </div>
                         <div class="card-body">
                             <h6 class="title text-danger">08/2023</h6>
-                            <p class="subtitle mb-2">ML, NLP and Artificial Intelligence Training</p>
+                            <p class="subtitle mb-2"><strong>ML, NLP and Artificial Intelligence Training</strong></p>
                             <p class="mb-0">Applied ML, DL, and NLP in different fields using Python.</p>
                         </div>
                     </div>
@@ -604,7 +620,8 @@
 
     <section class="section bg-dark py-5">
         <div class="container text-center" >
-            <h2 id="freeforwork" class="text-light mb-5 font-weight-normal">I’m currently a Backend Developer at Haxr IT Solutions, working remotely on a project basis. I’m actively open to freelance work and on-site opportunities to take on new challenges and grow my impact.</h2>
+            <h2 id="freeforwork" class="text-light mb-5 font-weight-normal">I’m currently a Backend Developer at Haxr IT Solutions, working remotely.  I’m actively open remote/onsite opportunities to take on new challenges and grow my impact.</h2>
+
             <a href="https://www.linkedin.com/in/galal-ali-a1454120a/" class="btn bg-primary w-lg">Contact Me</a>
         </div>
     </section>
