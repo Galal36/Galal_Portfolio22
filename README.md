@@ -5,14 +5,14 @@ This website highlights my **skills**, **projects**, **volunteering**, and **pro
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 
 👉 [View My Portfolio](#)  
 *(Once deployed, replace the `#` with your live URL — e.g., GitHub Pages, Netlify, or Vercel)*
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS  
 - **Backend (Future Integration):** Python, Django  
@@ -21,9 +21,9 @@ This website highlights my **skills**, **projects**, **volunteering**, and **pro
 
 ---
 
-## ✨ Features
+##  Features
 
-- Fully responsive design for all devices 📱💻  
+- Fully responsive design for all devices   
 - Smooth scrolling and animated sections  
 - Modern UI/UX with clear structure  
 - Project showcase with links to GitHub repos  
@@ -32,22 +32,4 @@ This website highlights my **skills**, **projects**, **volunteering**, and **pro
 
 ---
 
-## 📂 Project Structure
 
-Galal_Portfolio22/
-│── index.html
-│── assets/
-│ ├── css/
-│ ├── js/
-│ └── images/
-│── README.md
-
----
-
-## 🧭 How to Run Locally
-
-Follow these simple steps to view the portfolio on your local machine:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/portfolio-repo.git
