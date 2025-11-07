@@ -1,4 +1,4 @@
-# 🌐 Galal Ali — Personal Portfolio
+#  Galal Ali — Personal Portfolio
 
 Welcome to the repository of my **personal developer portfolio**.  
 This website highlights my **skills**, **projects**, **volunteering**, and **professional experience** as a **Full-Stack Web Developer**.
@@ -7,7 +7,7 @@ This website highlights my **skills**, **projects**, **volunteering**, and **pro
 
 ##  Live Demo
 
-👉 [View My Portfolio](#)  
+ [View My Portfolio](#)  
 *(Once deployed, replace the `#` with your live URL — e.g., GitHub Pages, Netlify, or Vercel)*
 
 ---
