@@ -7,8 +7,8 @@ This website highlights my **skills**, **projects**, **volunteering**, and **pro
 
 ##  Live Demo
 
- [View My Portfolio](#)  
-*(Once deployed, replace the `#` with your live URL — e.g., GitHub Pages, Netlify, or Vercel)*
+ [View My Portfolio](https://galal36.github.io/Galal_Portfolio22/)  
+
 
 ---
 
@@ -21,15 +21,6 @@ This website highlights my **skills**, **projects**, **volunteering**, and **pro
 
 ---
 
-##  Features
 
-- Fully responsive design for all devices   
-- Smooth scrolling and animated sections  
-- Modern UI/UX with clear structure  
-- Project showcase with links to GitHub repos  
-- Sections for volunteering, skills, education, and experience  
-- Easy to maintain and update content
-
----
 
 
